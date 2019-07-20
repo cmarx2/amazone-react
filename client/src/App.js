@@ -9,6 +9,7 @@ import CreateDepartment from './components/CreateDepartment';
 import ProtectedRoute from './providers/ProtectedRoute';
 import FetchUser from './providers/FetchUser';
 
+
 function App() {
   return (
     <div>
@@ -23,6 +24,7 @@ function App() {
           <Route component={NoMatch} />
         </Switch>
       </FetchUser>
+
     </div>
   );
 }

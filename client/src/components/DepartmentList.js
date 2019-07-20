@@ -6,8 +6,11 @@ const DepartmentList = ({ title, id }) => (
   <ul>
     <li>
       <Link to={{ pathname: `./products/${id}`, state: { title, id } }}> {title}</Link>
-      <Link to={{ pathname: './create-department', state: { title, id } }}>
-        <Button size="tiny"> Edit Department</Button></Link>
+
+      <Link to={{ pathname: './create-department', state: { title, id } }}> <Button size="tiny" > Edit Department</Button></Link>
+
+
+
     </li>
   </ul>
 )
