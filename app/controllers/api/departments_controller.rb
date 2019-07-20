@@ -5,11 +5,12 @@ class Api::DepartmentsController < ApplicationController
   end
   
   def create
-    department = Department.new(department_params_)
+    department = Department.new(department_params)
     if department.save
       render json: department
     else
       render json: { errors: department.errors }, status: :unprocessable_entity
+    end
   end
 
   def update
@@ -21,9 +22,6 @@ class Api::DepartmentsController < ApplicationController
     end
   end
 
-  def edit
-  end
- 
   def destroy
     Department.find(params[:id]).destroy
     render json: { message: 'department deleted'}
@@ -35,5 +33,4 @@ class Api::DepartmentsController < ApplicationController
     params.require(:department).permit(:title, :id)
   end
   
-end
 end
