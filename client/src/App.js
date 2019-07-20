@@ -7,6 +7,7 @@ import Login from './components/Login';
 import NoMatch from './components/NoMatch';
 import CreateDepartment from './components/CreateDepartment';
 
+
 function App() {
   return (
     <div>
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/products/:id" component={Products} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/create-department" component={CreateDepartment} />
+
 
         <Route component={NoMatch} />
       </Switch>

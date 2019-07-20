@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DepartmentIndex from './DepartmentIndex';
 import axios from 'axios';
+import { DepartmentConsumer } from '../providers/DepartmentProvider';
 
 class Home extends Component {
   state = { departments: [] }
@@ -25,3 +26,4 @@ class Home extends Component {
 }
 
 export default Home;
+
